@@ -12,13 +12,12 @@ import BannerSection from "../components/partials/home/banner-section";
 import TabBox from "../components/partials/home/tab-box";
 import FeatureBoxSection from "../components/partials/home/featurebox-section";
 import PromoSection from "../components/partials/home/promo-section";
-import BrandSection from "../components/partials/home/brand-section";
 
 import BannerGroup from "../components/partials/home/banner-group";
 import ProductWidgetContainer from "../components/partials/home/product-widget-container";
 import HomeSidebar from "../components/partials/home/home-sidebar";
 import { ApolloClient, InMemoryCache, useQuery, gql } from '@apollo/client';
-
+import BrandSection from '../components/partials/home/brand-section'
 import ProductWidgets from "../components/partials/home/product-widget-container";
 import BlogSection from '../components/partials/home/blog-section';
 import { getFeaturedProducts, getLatestProducts } from '../lib/firebase/firestore';

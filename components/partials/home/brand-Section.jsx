@@ -10,6 +10,7 @@ import { brandSlider } from '../../../utils/data/slider';
 import { fadeIn } from '../../../utils/data/keyframes'
 
 function BrandSection() {
+    
     return (
         <Reveal keyframes={fadeIn} delay={100} duration={500} triggerOnce>
             <OwlCarousel adClass="brands-slider owl-theme images-center mt-4" options={brandSlider}>

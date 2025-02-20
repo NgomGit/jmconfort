@@ -10,7 +10,7 @@ export default class MyDocument extends Document {
         return (
             <Html lang="en">
                 <Head>
-                    <base href="/react/porto/demo14/" />
+                    <base href="" />
                     { process.env.NODE_ENV === "production" ? <title>Porto - React eCommerce Template</title> : "" }
                     <link rel="icon" href="favicon.png" />
                     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,500,600,700,800%7CPoppins:200,300,400,500,600,700,800%7COswald:300,400,600,700" />

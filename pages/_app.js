@@ -58,8 +58,8 @@ const App = ({ Component, pageProps }) => {
                         <title>JM Confort</title>
 
                         <meta name="keywords" content="React Template" />
-                        <meta name="description" content="Porto - React eCommerce Template" />
-                        <meta name="author" content="SW-THEMES" />
+                        <meta name="description" content="JM Confort" />
+                        {/* <meta name="author" content="SW-THEMES" /> */}
                     </Helmet>
 
                     <Layout>

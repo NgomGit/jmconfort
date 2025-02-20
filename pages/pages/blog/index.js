@@ -44,7 +44,7 @@ function Blog () {
     return (
         <>
             <Helmet>
-                <title>Porto React Ecommerce - Blog Page </title>
+                <title>JM Confort </title>
             </Helmet>
 
             <main className="main">

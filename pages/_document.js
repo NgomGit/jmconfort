@@ -11,7 +11,7 @@ export default class MyDocument extends Document {
             <Html lang="en">
                 <Head>
                     <base href="" />
-                    { process.env.NODE_ENV === "production" ? <title>Porto - React eCommerce Template</title> : "" }
+                    { process.env.NODE_ENV === "production" ? <title>JM Confort</title> : "" }
                     <link rel="icon" href="favicon.png" />
                     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,500,600,700,800%7CPoppins:200,300,400,500,600,700,800%7COswald:300,400,600,700" />
                     <link rel="stylesheet" type="text/css" href="vendor/bootstrap.min.css" />

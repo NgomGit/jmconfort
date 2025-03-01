@@ -126,7 +126,8 @@ function ShopSidebarOne ( props ) {
 
     function filterByCategory ( selected ) {
         console.log("Selected ", selected)
-        router.push( router.pathname.replace( '[grid]', query.grid ) + '?category=' + selected );
+        setSelectedCats(selected)
+        router.push( router.pathname.replace( '[grid]', query.grid ) + '?category=' + (selected !== "default" ?selected : ''));
     }
 
     function filterByPrice ( e ) {
@@ -175,6 +176,7 @@ function ShopSidebarOne ( props ) {
                                             /> */}
 
                                             <select className="form-control form-control-sm" value={ selectedCats } onChange={ e => filterByCategory( e.target.value) }>
+                                                <option value={"default"}>Toutes</option>
                                                 {categories.map((cat, index)=>
                                                     <option value={cat.slug}>{cat.name}</option>
                                                 )}
@@ -199,8 +201,8 @@ function ShopSidebarOne ( props ) {
                     </div>
 
                     {
-                        ( query.category || query.sizes || query.colors || query.min_price || query.max_price || query.brands ) && <div className="widget">
-                            <ALink href={ { query: { grid: query.grid } } } scroll={ false } className="btn btn-primary reset-filter">Reset All Filters</ALink>
+                        ( query.category || query.sizes || query.colors || query.min_price || query.max_price || query.brands ) && <div className="widget" onClick={()=> setSelectedCats("default")}>
+                            <ALink  href={ { query: { grid: query.grid } } } scroll={ false } className="btn btn-primary reset-filter">Supprimer les filtres</ALink>
                         </div>
                     }
 

@@ -17,10 +17,11 @@ export default class MyDocument extends Document {
                     <link rel="stylesheet" type="text/css" href="vendor/bootstrap.min.css" />
                     <link rel="stylesheet" type="text/css" href="vendor/fontawesome-free/css/all.min.css" />
                     <link rel="stylesheet" type="text/css" href="vendor/simple-line-icons/css/simple-line-icons.min.css" />
+                    <script src="js/jquery.min.js"></script>
                 </Head>
                 <body>
                     <Main />
-                    <script src="js/jquery.min.js"></script>
+                  
                     <NextScript />
                 </body>
             </Html>

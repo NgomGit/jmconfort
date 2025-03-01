@@ -142,9 +142,9 @@ function MainMenu ( { router } ) {
                     {/* <li className={ pathname === '/pages/blog' ? 'active' : '' }>
                         <ALink href="/pages/blog">Blog</ALink>
                     </li> */}
-                    <li className={ pathname === '/pages/about-us' ? 'active' : '' }>
+                    {/* <li className={ pathname === '/pages/about-us' ? 'active' : '' }>
                         <ALink href="/pages/about-us">Apropos</ALink>
-                    </li>
+                    </li> */}
                     <li className={ pathname === '/pages/contact-us' ? 'active' : '' }>
                         <ALink href="/pages/contact-us">Contacter nous</ALink>
                     </li>

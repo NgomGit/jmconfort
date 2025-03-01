@@ -10,7 +10,7 @@ import ProductsGrid from '../../components/partials/products-collection/product-
 
 import { GET_PRODUCTS } from '../../server/queries';
 import withApollo from '../../server/apollo';
-import { getFeaturedProducts, getProductsDoc } from '../../lib/firebase/firestore';
+import { getFeaturedProducts, getProductsDoc, getCategories } from '../../lib/firebase/firestore';
 
 function Shop () {
     const router = useRouter();
@@ -20,6 +20,7 @@ function Shop () {
     const [ sortBy, setSortBy ] = useState( query.sortBy ? query.sortBy : 'default' );
     // const products = data && data.products.data;
     const [products, setProducts] = useState()
+    const [categories, setCategories] = useState([])
     const [loading, setLoading] = useState(true)
     
 
@@ -32,6 +33,11 @@ function Shop () {
         }, query)
     }, [query])
 
+    useEffect(()=>{
+        getCategories((results)=>{
+            setCategories(results)
+        })
+    }, [])
 
     const totalPage = products ? parseInt( products.total / perPage ) + ( products.total % perPage ? 1 : 0 ) : 1;
 
@@ -113,7 +119,7 @@ function Shop () {
                                 <>
                                     <li className="breadcrumb-item"><ALink href={ { query: {} } } scroll={ false }>shop</ALink></li>
                                     {
-                                        data && products?.categoryFamily?.map( ( item, index ) => (
+                                        categories.map( ( item, index ) => (
                                             <li className="breadcrumb-item" key={ `category-family-${index}` }><ALink href={ { query: { category: item.slug } } } scroll={ false }>{ item.name }</ALink></li>
                                         ) )
                                     }

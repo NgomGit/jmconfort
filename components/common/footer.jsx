@@ -10,14 +10,14 @@ function Footer () {
                     <div className="row">
                         <div className="col-lg-3 col-md-4">
                             <div className="widget">
-                                <h4 className="widget-title font-weight-bold">Contact Info</h4>
+                                <h4 className="widget-title font-weight-bold">Contact</h4>
                                 <ul className="contact-info">
                                     <li>
-                                        <span className="contact-info-label">Adresse:</span>1234 Street Name, City, England
+                                        <span className="contact-info-label">Adresse:</span>Foire Cices, Dakar, Sénégal
 									</li>
                                     <li>
                                         <span className="contact-info-label">Téléphone:</span>
-                                        <a href="tel:">+221 77 335 52 90
+                                        <a href="tel:">+221 77 972 26 68
 										</a>
                                     </li>
                                     <li>

@@ -87,7 +87,7 @@ export default function Header ( { adClass = '' } ) {
                         <div className="header-contact d-none d-lg-flex align-items-center ml-auto mr-4">
                             <i className="icon-phone-2"></i>
                             <h6 className="line-height-1 pr-2">Contacter nous
-								<a href="tel:+221781080363" className="d-block text-dark font1">+221 77 335 52 90</a>
+								<a href="tel:+221781080363" className="d-block text-dark font1">+221 77 972 26 68</a>
                             </h6>
                         </div>
 

@@ -138,7 +138,7 @@ function Wishlist(props) {
                                                                 aria-label="Chat on WhatsApp" 
                                                                 target='_blank'
                                                                 onClick={()=> console.log("I am clicked")}
-                                                                href={"https://wa.me/+221773355290?text=Bonjour%20je%20m%27int%C3%A9resse%20%C3%A0%20ce%20produit.%20Est%20il%20disponible%20%3F\n" + encodeURIComponent(item?.pictures[0].url)} >
+                                                                href={"https://wa.me/+221779722668?text=Bonjour%20je%20m%27int%C3%A9resse%20%C3%A0%20ce%20produit.%20Est%20il%20disponible%20%3F\n" + encodeURIComponent(item?.pictures[0].url)} >
                                                                 <i class="fab fa-whatsapp"></i> Contacter par whatsapp
                                                             </a>
                                                             

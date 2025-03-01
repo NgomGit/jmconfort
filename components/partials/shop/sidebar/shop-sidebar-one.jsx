@@ -15,7 +15,8 @@ import { GET_SHOP_SIDEBAR_DATA } from '../../../../server/queries';
 import { widgetFeaturedProductSlider } from '../../../../utils/data/slider';
 import { shopColors, shopSizes, brands } from '../../../../utils/data/shop';
 import ProductThree from '../../../features/products/product-three';
-import { getFeaturedProducts } from '../../../../lib/firebase/firestore';
+import { getFeaturedProducts, getCategories } from '../../../../lib/firebase/firestore';
+
 
 const TreeNode = ( props ) => {
     return (
@@ -32,6 +33,8 @@ function ShopSidebarOne ( props ) {
     // const { data, loading, error } = useQuery( GET_SHOP_SIDEBAR_DATA, { variables: { featured: true } } );
     const [ priceRange, setRange ] = useState( { min: 0, max: 1000000 } );
     const [features, setFeatures] = useState([])
+    const [categories, setCategories] = useState([])
+    const [selectedCats, setSelectedCats] = useState([])
     const [loading, setLoading] = useState(true)
     // const categories = useMemo( () => {
     //     let cats = data ? data.shopSidebarData.categories : [];
@@ -82,6 +85,14 @@ function ShopSidebarOne ( props ) {
         }
     }, [] )
 
+
+    useEffect(()=>{
+        getCategories((categories)=>{
+            console.log("Categories ", categories)
+            setCategories(categories)
+        })
+    },[])
+
     useEffect(()=>{
         getFeaturedProducts((results)=>{
             setFeatures(results)
@@ -114,7 +125,8 @@ function ShopSidebarOne ( props ) {
 
 
     function filterByCategory ( selected ) {
-        router.push( router.pathname.replace( '[grid]', query.grid ) + '?category=' + ( selected.length ? selected[ 0 ] : '' ) );
+        console.log("Selected ", selected)
+        router.push( router.pathname.replace( '[grid]', query.grid ) + '?category=' + selected );
     }
 
     function filterByPrice ( e ) {
@@ -137,7 +149,7 @@ function ShopSidebarOne ( props ) {
             <div className="sidebar-overlay" onClick={ closeSidebar }></div>
             <aside className={ `sidebar-shop col-lg-3  mobile-sidebar skeleton-body skel-shop-products ${ !loading ? 'loaded' : '' } ${ props.display === 'none' ? 'd-lg-none' : '' } ${ props.right ? '' : 'order-lg-first' }` }>
                 <StickyBox className="sidebar-wrapper" offsetTop={ 70 }>
-                    {/* <div className="widget">
+                    <div className="widget">
                         <SlideToggle>
                             { ( { onToggle, setCollapsibleElement, toggleState } ) => (
                                 <>
@@ -146,7 +158,7 @@ function ShopSidebarOne ( props ) {
                                     </h3>
                                     <div className="overflow-hidden" ref={ setCollapsibleElement }>
                                         <div className="widget-body">
-                                            <Tree
+                                            {/* <Tree
                                                 className="no-icon cat-list border-0"
                                                 selectable={ true }
                                                 showIcon={ false }
@@ -160,7 +172,25 @@ function ShopSidebarOne ( props ) {
                                                 selectedKeys={ query.category ? [ query.category ] : [] }
                                                 treeData={ categories }
                                                 onSelect={ filterByCategory }
-                                            />
+                                            /> */}
+
+                                            <select className="form-control form-control-sm" value={ selectedCats } onChange={ e => filterByCategory( e.target.value) }>
+                                                {categories.map((cat, index)=>
+                                                    <option value={cat.slug}>{cat.name}</option>
+                                                )}
+                                            </select>
+
+                                                {/* <Form.Check
+                                                    inline
+                                                    label={cat.name}
+                                                    className='checkbox'
+                                                    name="group1"
+                                                    value={cat.isChecked}
+                                                    onChange={ e => filterByCategory( cat) }
+                                                    // checked={product.category ? product.category.id == cat.id : false }
+                                                    type={'checkbox'}
+                                                    id={`checkbox-${index+1}`}
+                                                /> */}
                                         </div>
                                     </div>
                                 </>
@@ -172,7 +202,7 @@ function ShopSidebarOne ( props ) {
                         ( query.category || query.sizes || query.colors || query.min_price || query.max_price || query.brands ) && <div className="widget">
                             <ALink href={ { query: { grid: query.grid } } } scroll={ false } className="btn btn-primary reset-filter">Reset All Filters</ALink>
                         </div>
-                    } */}
+                    }
 
                     <div className="widget overflow-hidden">
                         <SlideToggle>

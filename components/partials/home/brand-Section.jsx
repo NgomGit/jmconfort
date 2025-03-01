@@ -64,16 +64,16 @@ function BrandSection() {
                         effect="black and white"
                     />
                 </figure>
-                {/* <figure>
+                <figure>
                     <LazyLoadImage
                         alt="brand"
-                        src="images/brands/small/brand6.png"
+                        src="images/brands/brand7.png"
                         width="100%"
                         height={56}
                         threshold={500}
                         effect="black and white"
                     />
-                </figure> */}
+                </figure>
             </OwlCarousel >
         </Reveal>
     );

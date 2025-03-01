@@ -24,13 +24,13 @@ export default function ContactUs () {
 
             <div id="map">
                 <GoogleMapReact
-                    bootstrapURLKeys={ { key: 'your-api-key' } }
-                    defaultCenter={ { lat: 59.95, lng: 30.33 } }
-                    defaultZoom={ 11 }
+                    bootstrapURLKeys={ { key: "AIzaSyA_CAm3SZcZYYS9A2Iwzksztxp9xnsPU_g" } }
+                    defaultCenter={ { lat: 14.7437295, lng: -17.4632496 } }
+                    defaultZoom={ 14 }
                 >
                     <AnyReactComponent
-                        lat={ 59.955413 }
-                        lng={ 30.337844 }
+                        lat={ 14.7437295 }
+                        lng={ -17.4632496 }
                     />
                 </GoogleMapReact>
             </div>
@@ -58,8 +58,8 @@ export default function ContactUs () {
                             <div className="feature-box text-center">
                                 <i className="sicon-location-pin"></i>
                                 <div className="feature-box-content">
-                                    <h3>Address</h3>
-                                    <h5>123 Wall Street, New York / NY</h5>
+                                    <h3>Adresse</h3>
+                                    <h5>Foire Cicess, Dakar Sénégal</h5>
                                 </div>
                             </div>
                         </div>
@@ -68,7 +68,7 @@ export default function ContactUs () {
                                 <i className="fa fa-mobile-alt"></i>
                                 <div className="feature-box-content">
                                     <h3>Phone Number</h3>
-                                    <h5>(800) 123-4567</h5>
+                                    <h5>+221 77 972 26 68</h5>
                                 </div>
                             </div>
                         </div>
@@ -77,7 +77,7 @@ export default function ContactUs () {
                                 <i className="far fa-envelope"></i>
                                 <div className="feature-box-content">
                                     <h3>E-mail Address</h3>
-                                    <h5>porto@portotheme.com</h5>
+                                    <h5>jmconfort2025@gmail.com</h5>
                                 </div>
                             </div>
                         </div>
@@ -85,8 +85,8 @@ export default function ContactUs () {
                             <div className="feature-box text-center">
                                 <i className="far fa-calendar-alt"></i>
                                 <div className="feature-box-content">
-                                    <h3>Working Days/Hours</h3>
-                                    <h5>Mon - Sun / 9:00AM - 8:00PM</h5>
+                                    <h3>Horaires:</h3>
+                                    <h5>Lundi - Dimanche / 8h:00  - 20h:00</h5>
                                 </div>
                             </div>
                         </div>
@@ -95,37 +95,37 @@ export default function ContactUs () {
 
                 <div className="row">
                     <div className="col-lg-6">
-                        <h2 className="mt-6 mb-2">Send Us a Message</h2>
+                        <h2 className="mt-6 mb-2">Envoyer nous un message</h2>
 
                         <form className="mb-0" action="#">
                             <div className="form-group">
-                                <label className="mb-1" htmlFor="contact-name">Your Name <span className="required">*</span></label>
+                                <label className="mb-1" htmlFor="contact-name">Votre nom<span className="required">*</span></label>
                                 <input type="text" className="form-control" id="contact-name" name="contact-name"
                                     required />
                             </div>
 
                             <div className="form-group">
-                                <label className="mb-1" htmlFor="contact-email">Your E-mail	<span className="required">*</span></label>
+                                <label className="mb-1" htmlFor="contact-email">Email<span className="required">*</span></label>
                                 <input type="email" className="form-control" id="contact-email" name="contact-email"
                                     required />
                             </div>
 
                             <div className="form-group">
-                                <label className="mb-1" htmlFor="contact-message">Your Message <span className="required">*</span></label>
+                                <label className="mb-1" htmlFor="contact-message">Message <span className="required">*</span></label>
                                 <textarea cols="30" rows="1" id="contact-message" className="form-control"
                                     name="contact-message" required></textarea>
                             </div>
 
                             <div className="form-footer mb-0">
                                 <button type="submit" className="btn btn-dark font-weight-normal">
-                                    Send Message
+                                    Envoyer
 								</button>
                             </div>
                         </form>
                     </div>
 
                     <div className="col-lg-6">
-                        <h2 className="mt-6 mb-1">Frequently Asked Questions</h2>
+                        <h2 className="mt-6 mb-1">Question Fréquentes</h2>
                         <div id="accordion">
                             <Accordion adClass="accordion-simple">
                                 <Card title="Curabitur eget leo at velit imperdiet viaculis vitaes?" adClass="card-accordion">

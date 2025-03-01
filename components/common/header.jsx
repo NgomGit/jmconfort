@@ -109,7 +109,7 @@ export default function Header ( { adClass = '' } ) {
                         <ALink href="/" className="logo">
                             {/* <img src="images/logo-black.png" className="white-logo sticky-logo" alt="Porto Logo"
                                 width="110" height="46" /> */}
-                                  <h5 className="line-height-10">JM Confort</h5>
+                                <h5 className="line-height-10">JM Confort</h5>
                         </ALink>
                     </div>
 

@@ -40,10 +40,10 @@ export default function ContactUs () {
                     <div className="row">
                         <div className="col-12">
                             <h2 className="ls-n-25 m-b-1">
-                                Contact Info
+                                Contact
 							</h2>
 
-                            <p>
+                            {/* <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing
                                 elit. Sed imperdiet libero id nisi euismod, sed
                                 porta est consectetur. Vestibulum auctor felis eget
@@ -51,7 +51,7 @@ export default function ContactUs () {
                                 gravida, accumsan libero luctus, molestie nunc.L
                                 orem ipsum dolor sit amet, consectetur adipiscing
                                 elit.
-							</p>
+							</p> */}
                         </div>
 
                         <div className="col-sm-6 col-lg-3">
@@ -124,7 +124,7 @@ export default function ContactUs () {
                         </form>
                     </div>
 
-                    <div className="col-lg-6">
+                    {/* <div className="col-lg-6">
                         <h2 className="mt-6 mb-1">Question Fréquentes</h2>
                         <div id="accordion">
                             <Accordion adClass="accordion-simple">
@@ -179,7 +179,7 @@ export default function ContactUs () {
                                 </Card>
                             </Accordion>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
 
